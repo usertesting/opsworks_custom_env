@@ -9,8 +9,8 @@ node[:deploy].each do |application, deploy|
     env deploy[:environment_variables]
   end
 
-  link "#{deploy[:deploy_to]}/shared/config/application.yml" do
-    to "#{deploy[:deploy_to]}/current/config/application.yml"
+  link "#{deploy[:deploy_to]}/current/config/application.yml" do
+    to "#{deploy[:deploy_to]}/shared/config/application.yml"
   end
   
 end

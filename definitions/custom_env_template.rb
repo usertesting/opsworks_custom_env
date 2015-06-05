@@ -13,10 +13,6 @@ define :custom_env_template do
     group params[:deploy][:group]
     mode "0660"
     variables :env => params[:env]
-
-    only_if do
-      File.exists?("#{params[:deploy][:deploy_to]}/shared/config")
-    end
   end
   
 end
